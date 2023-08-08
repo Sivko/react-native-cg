@@ -6,16 +6,37 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "eject": "expo eject"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "1.17.11",
+    "@react-native-picker/picker": "^2.4.10",
+    "@react-navigation/bottom-tabs": "^6.5.8",
+    "@react-navigation/native": "^6.1.7",
+    "@react-navigation/native-stack": "^6.9.13",
+    "dotenv": "^16.3.1",
     "expo": "~48.0.18",
+    "expo-barcode-scanner": "~12.3.2",
+    "expo-camera": "~13.2.1",
+    "expo-checkbox": "~2.3.1",
+    "expo-image-picker": "~14.1.1",
     "expo-status-bar": "~1.4.4",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "path": "^0.12.7",
     "react": "18.2.0",
-    "react-native": "0.71.8"
+    "react-native": "0.71.8",
+    "react-native-image-picker": "^5.6.0",
+    "react-native-permissions": "^3.8.3",
+    "react-native-swipe-list-view": "^3.2.9"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "axios": "^1.4.0",
+    "eslint-plugin-react": "^7.33.0",
+    "eslint-plugin-react-native": "^4.0.0",
+    "react-native-dotenv": "^3.4.9"
   },
   "private": true
 }
