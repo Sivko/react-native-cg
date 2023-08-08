@@ -1,10 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 
 import { StyleSheet, Text, View, StatusBar, SafeAreaView, ScrollView, Button } from 'react-native';
 import { getLogsData, removeLogsData, setLogsData } from '../requests/local/getSetLogs';
+import { removeFlightDeals } from '../requests/local/getSetFlights';
+import { LoginContext } from '../Helper/Context';
 
 function Option() {
   [logs, setLogs] = useState([])
+  const { loggedIn, setLoggedIn } = useContext(LoginContext)
 
   useEffect(() => {
     async function fetching() {
@@ -18,9 +21,11 @@ function Option() {
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scrollView}>
         <View>
+          <Button title="Очистить Рейсы" onPress={() => { removeFlightDeals(); }} />
+          <Button title="Очистить Логи" onPress={() => { removeLogsData([]); setLogs([]) }} />
+          <Button title="Выйти" onPress={() => {setLoggedIn(false)}} />
           <Text>Логи:</Text>
           <Text>{JSON.stringify(logs)}</Text>
-          <Button title="Очистить" onPress={()=>{removeLogsData([]); setLogs([])}} />
         </View>
       </ScrollView>
     </SafeAreaView>

@@ -27,7 +27,10 @@ export default function SettingsStackScreen() {
         name="Квитанции"
         component={Invoces}
         options={() => ({
-          headerRight: () => <Button title="Отправить" onPress={()=>uploadInvocesSlots()} />
+          headerRight: () => <Button title="Отправить" onPress={()=> {
+            alert("Сейчас я отправляю данные и заношку все это в Логи, статус пока не меняется, сегодня поправлю и будет добавлен лоэдер :), ")
+            uploadInvocesSlots()
+          }} />
         })}
       />
     </SettingsStack.Navigator>

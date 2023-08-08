@@ -25,7 +25,7 @@ export async function setInvocesData(data) {
 export async function getInvocesToUploadData() {
   try {
     const res = await AsyncStorage.getItem('invoceToUpload') || "[]"
-    console.log(res, "res")
+    // console.log(res, "res")
     return JSON.parse(res)
   } catch (err) {
     console.log(err)

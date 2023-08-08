@@ -23,5 +23,5 @@ export default async function uploadInvocesSlots() {
       await new Promise(r => setTimeout(r, 1000))
     }
   }
-  alert("Готово");
+  alert("Отправилены все квитанции");
 }
